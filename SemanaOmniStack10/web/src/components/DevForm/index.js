@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css'
 
-function DevForm({onSubmit}) {
+function DevForm({ onSubmit }) {
     const [github_username, setGithub_username] = useState('');
     const [techs, setTechs] = useState('');
     const [latitude, setLatitude] = useState('');
@@ -26,18 +26,18 @@ function DevForm({onSubmit}) {
 
     }, []);
 
-    async function handleSubmit(e){
+    async function handleSubmit(e) {
         e.preventDefault();
 
-       await onSubmit({
+        await onSubmit({
             github_username,
             techs,
             latitude,
             longitude
-          });
+        });
 
-          setGithub_username('');
-    setTechs('');
+        setGithub_username('');
+        setTechs('');
     }
 
     return (
@@ -64,7 +64,7 @@ function DevForm({onSubmit}) {
                         <input name='longitude' id='longitude' required value={longitude} onChange={e => setLongitude(e.target.value)} />
                     </div>
                 </div>
-                <button type='submit'>Salvar</button> 
+                <button type='submit'>Salvar</button>
             </form>
         </>
     );
