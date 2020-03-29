@@ -42,5 +42,28 @@ form input{
     text-align: center;
     text-decoration: none;
     font-size: 10px;
-    line-height: 60pz 
+    line-height: 60px;
+    transition: filter 0.2%;
+}
+
+.bottom:houver{
+    filter: brightness(90%);
+}
+
+
+.back-link{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #414140;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2%;
+
+
+}
+
+.back-link:houver{
+    opacity: 0.8%;
 }
