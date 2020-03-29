@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import './styles.css'
 import '../../global.css'
 export default function Logon(){
@@ -11,9 +12,9 @@ export default function Logon(){
             <input placeholder='Sua ID'/>
             <button type='submit' className='bottom'>Entrar</button> 
 
-            <a href='/register'>
+            <Link to='/register' className='back-link'>
                 Nao tenho cadastro
-            </a>
+            </Link>
         </form>
 
         </section>
