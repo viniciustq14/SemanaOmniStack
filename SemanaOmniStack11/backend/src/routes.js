@@ -12,8 +12,8 @@ routes.post('/sections',sectionCotroller.create)
 
 routes.get('/porfile',profileCotroller.index);
 
-routes.get('/incidents',incidentsController.index);
-routes.post('/incidents',incidentsController.create);
-routes.delete('/incidents/:id',incidentsController.delete);
+routes.get('/incidents',incidentController.index);
+routes.post('/incidents',incidentController.create);
+routes.delete('/incidents/:id',incidentController.delete);
 
 module.exports=routes;

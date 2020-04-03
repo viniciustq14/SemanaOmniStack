@@ -17,14 +17,17 @@ module.exports = {
         return res.json({ id });
     },
     async index(req, res) {
-        const { page } = req.query;
+        /*const { page } = req.query;
         page--;
         const [count] = await connection('incidents').count();
         const incidents = await connection('incidents').
             join('ongs', 'ongs.id', '=', 'incidents.ong_id').
             limit(5).offset(page * 5).
             select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.whatsapp', 'ongs.city', 'ongs.uf']);
-        res.header('X-Total-Count', count['count(*)'])
+        res.header('X-Total-Count', count['count(*)'])*/
+
+        const incidents=await connection('incidents').join('ongs','ongs.id','=','incidents.ong_id').select(['incidents.*', 'ongs.name', 'ongs.email', 'ongs.whatsapp', 'ongs.city', 'ongs.uf']);
+
         return res.json(incidents);
     },
     async delete(req, res) {

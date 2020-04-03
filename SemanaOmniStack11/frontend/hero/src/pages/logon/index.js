@@ -13,9 +13,9 @@ export default function Logon(){
       try {
         const response =await api.post('section',{id})
         
-        localStorage=setItem('ongId',id)
-        localStorage=setItem('ongName',response.data.name)
-        history.push('/rpofile')
+        //localStorage=setItem('ongId',id)
+        //localStorage=setItem('ongName',response.data.name)
+        history.push('/profile')
       } catch (error) {
         alert('Falha no login')
       }
